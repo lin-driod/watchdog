@@ -1,0 +1,38 @@
+name: GitHub Watchdog
+
+on:
+  schedule:
+    # Every 30 minutes (GitHub Actions cron — UTC)
+    - cron: '*/30 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watchdog-run
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check repos for updates
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NTFY_TOPIC: gh-watchdog-m4u1spvk77
+        run: python3 check_repos.py
+
+      - name: Commit state if changed
+        run: |
+          git config user.name  "github-watchdog[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json 2>/dev/null || true
+          if ! git diff --cached --quiet state.json 2>/dev/null; then
+            git commit -m "chore: update watchdog state [skip ci]"
+            git push
+          else
+            echo "No state changes to commit."
+          fi
