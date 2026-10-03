@@ -1,0 +1,8 @@
+{
+  "scope": "release",
+  "repos": [
+    "facebook/react",
+    "vuejs/core",
+    "rust-lang/rust"
+  ]
+}
