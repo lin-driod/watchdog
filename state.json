@@ -1,0 +1,11 @@
+{
+  "facebook/react": {
+    "release_id": 385715000
+  },
+  "vuejs/core": {
+    "release_id": 390549462
+  },
+  "rust-lang/rust": {
+    "release_id": 400956096
+  }
+}
