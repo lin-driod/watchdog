@@ -1,8 +1,12 @@
 {
   "scope": "release",
   "repos": [
-    "facebook/react",
-    "vuejs/core",
-    "rust-lang/rust"
+    "alibaba/MNN",
+    "OpenMinis/OpenMinis",
+    "AAswordman/Operit",
+    "AstrBotDevs/AstrBot",
+    "rikkahub/rikkahub",
+    "OpenListTeam/OpenList",
+    "zfile-dev/zfile"
   ]
 }
