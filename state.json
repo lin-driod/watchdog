@@ -7,5 +7,26 @@
   },
   "rust-lang/rust": {
     "release_id": 400956096
+  },
+  "alibaba/MNN": {
+    "release_id": 358027083
+  },
+  "OpenMinis/OpenMinis": {
+    "release_id": 399277404
+  },
+  "AAswordman/Operit": {
+    "release_id": 391213555
+  },
+  "AstrBotDevs/AstrBot": {
+    "release_id": 400634319
+  },
+  "rikkahub/rikkahub": {
+    "release_id": 400835462
+  },
+  "OpenListTeam/OpenList": {
+    "release_id": 380615041
+  },
+  "zfile-dev/zfile": {
+    "release_id": 369897449
   }
 }
